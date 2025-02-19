@@ -8,11 +8,16 @@ export default function DropDown({ list = [{ name: "Default", value: "" }], maxH
     const ref = useRef(null)
     useEffect(() => {
         if (!list) return
-        setTitle(list[prefixI].name)
+        setItem(list[prefixI])
     }, [])
     useEffect(() => outClick(() => {
         setShow(false)
     }, ref), [])
+
+    const setItem=(item)=>{
+        selectFx(item?.value)
+        setTitle(item?.name)
+    }
     return (
         <div ref={ref} className="relative flex flex-row justify-center">
             <button onClick={() => [
@@ -29,10 +34,9 @@ export default function DropDown({ list = [{ name: "Default", value: "" }], maxH
                     ? <div style={{
                         backgroundColor: "white",
                         maxHeight: maxH
-                    }} className="absolute top-full right-[10%] border-2 p-2 rounded-xl overflow-scroll">
+                    }} className="absolute top-full right-[10%] z-[10] border-2 p-2 rounded-xl overflow-scroll">
                         {list.map((item, i) => <button key={i} onClick={() => {
-                            selectFx(item?.value)
-                            setTitle(item?.name)
+
                             setShow(false)
                         }} style={{
                             backgroundColor: color
