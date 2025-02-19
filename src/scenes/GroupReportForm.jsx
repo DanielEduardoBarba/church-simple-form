@@ -14,7 +14,7 @@ export default function GroupReportForm() {
 
     }
     const fetchMeeting=()=>{
-        meeting["offering"]=Number(getTag("offering-dollars")?.value)+(Number(getTag("offering-cents")?.value)/100)
+        meeting["offering"]=Number(getTag("offering-dollars")?.value||0)+(Number(getTag("offering-cents")?.value||0)/100)
         meeting["kids"]=getTag("num-kids")?.value
         meeting["visitors"]=getTag("num-visitors")?.value
         meeting["comments"]=getTag("offering-dollars")?.value
@@ -87,7 +87,7 @@ const getTag=(id)=>document.getElementById(id)
                             placeholder="USD"
                             className="default-input w-full" />
                         <p className="text-3xl">.</p>
-                        <input id="offerin-cents"
+                        <input id="offering-cents"
                             onInput={(e) => {
                                 if (String(e.target.value).length > 2) {
                                     e.target.value = String(e.target.value).substring(0, 2)
