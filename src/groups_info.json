@@ -1,0 +1,22 @@
+{
+    "LISTS": {
+        "DISTRICTS": [
+            {
+                "name": "1 /Oscar Tubac",
+                "value": "1"
+            },
+            {
+                "name": "2 /Victor Martin",
+                "value": "2"
+            },
+            {
+                "name": "3 /Fredy Enriquez",
+                "value": "3"
+            },
+            {
+                "name": "4 /Emilio Castro",
+                "value": "4"
+            }
+        ]
+    }
+}

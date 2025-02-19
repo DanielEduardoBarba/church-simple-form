@@ -1,18 +1,20 @@
  
 .app-container {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #40769c;
+  width: 100vw;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white; 
+  color: white;  */
 }
   
 .dashboard-container {
   background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +22,35 @@
   font-size: calc(10px + 2vmin);
   color: white; 
 }
+/* .dashboard-container *{
+  width: min-content;
+} */
  
+.default-button{
+  width: min-content;
+  background-color: #6081c3;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px black;
+  color: white;
+  padding: 4px;
+  padding-inline: 20px;
+  font-size: calc(8px + 2vmin);
+  margin: 4px;
+}
+.default-button:active{
+  transform: translateX(2px) translateY(2px);
+  box-shadow: 3px 3px 3px 0px black;
+}
+
+.default-input{
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px black;
+  color: black;
+  padding: 4px;
+  padding-inline: 10px;
+  margin: 4px;
+  font-size: calc(8px + 2vmin);
+}
 
 
 @import 'tailwindcss/base';

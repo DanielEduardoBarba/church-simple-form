@@ -1,20 +1,22 @@
 
 import { useEffect, useState } from 'react'
+import { setServer } from './scripts/api'
+import GroupReportForm from './scenes/GroupReportForm.jsx'
 import './styling/app.css'
-import { isProd } from './scripts/api'
+
 export default function App() {
   const [scene, setScene] = useState(0)
 
 useEffect(()=>{
-isProd()
+setServer()
 },[])
   return (
-    <main className="app-container">
+    <main className="app-container ">
 
-      <div className="dashboard-container">
+      <div className="dashboard-container ">
         {
           scene == 0
-            ? null
+            ? <GroupReportForm />
             : <p>Hey who told you to be here? scene:{scene}</p>
         }
       </div>
