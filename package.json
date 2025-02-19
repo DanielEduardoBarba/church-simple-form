@@ -13,8 +13,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev":"NODE_ENV=development react-scripts start",
+    "prod":"NODE_ENV=production react-scripts start", 
     "build": "react-scripts build",
+    "deploy": "npm run build && firebase deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
