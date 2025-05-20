@@ -1,15 +1,11 @@
 
 import { useEffect, useState } from 'react'
-import { setServer } from './scripts/api'
 import GroupReportForm from './scenes/GroupReportForm.jsx'
 import './styling/app.css'
 
 export default function App() {
   const [scene, setScene] = useState(0)
 
-useEffect(()=>{
-setServer()
-},[])
   return (
     <main className="app-container ">
 
